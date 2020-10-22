@@ -42,7 +42,7 @@ export class Calc1Component implements OnInit {
       }
   
       return 0;
-  });
+    });
   }
 
   numberOnly(event, mode): boolean {console.log(event.keyCode);

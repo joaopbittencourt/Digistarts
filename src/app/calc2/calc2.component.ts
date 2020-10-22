@@ -16,9 +16,9 @@ export class Calc2Component implements OnInit {
 
   operators: OperatorType[] = [
     {id: 0, value: '+'},
-    {id: 2,value: '*'},
-    {id: 3,value: '/'},
-    {id: 4,value: '%'}
+    {id: 2, value: '*'},
+    {id: 3, value: '/'},
+    {id: 4, value: '%'}
   ];
 
   numbers: string[] = [];
@@ -36,11 +36,10 @@ export class Calc2Component implements OnInit {
 
   }
 
-  onAddCalc(form: any) { 
+  onOperation(form: any) { 
     let n = parseInt( form.n, 10 );
     let k = parseInt( form.k, 10 );
     let result: number;
-    console.log(form);
     
     switch (form.op) {
       case 0 : result = (n + k);
