@@ -1,0 +1,36 @@
+<form 
+    [formGroup]="formCalc" 
+    (ngSubmit)="onAddCalc(formCalc.value)">
+    <mat-dialog-content>
+        <mat-form-field>
+            <input 
+                matInput 
+                formControlName="n"
+                (keypress)="numberOnly($event, 'n')"
+                type="number"
+                placeholder="n">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input 
+                matInput 
+                formControlName="k"
+                (keypress)="numberOnly($event, 'k')"
+                type="number"
+                placeholder="k">
+        </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button 
+            mat-button color="primary"
+            class="mat-button"
+            type="submit">
+            Adicionar   
+        </button>
+    </mat-dialog-actions>
+</form>
+<ul>
+    <li *ngFor="let number of numbers">
+        {{number}}
+    </li>
+</ul>
